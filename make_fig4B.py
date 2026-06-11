@@ -7,12 +7,12 @@ particles, per-class translucent density fields for the C/S/I shapes, and
 italic letters at the class centroids.
 
 INPUT (deposited on Zenodo, DOI: <INSERT>):
-  3DVA_J2538_8A_latent_with_class.csv.gz
+  3DVA_J2538_8A_latent_with_class.csv
   columns: uid, PC1, PC2, PC3, class   (class is 'C', 'S', 'I', or empty)
 
 USAGE:
-  python make_fig4B.py                       # expects the CSV in the same folder
-  python make_fig4B.py path/to/latent.csv.gz # or pass the path
+  python make_fig4B.py                    # expects the CSV in the same folder
+  python make_fig4B.py path/to/latent.csv # or pass the path (.csv or .csv.gz)
 
 OUTPUT: Fig4B_latent_landscape.pdf / .png / .svg
 
@@ -29,7 +29,7 @@ from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.patheffects as pe
 
 # ----------------------------------------------------------------- INPUT
-CSV = sys.argv[1] if len(sys.argv) > 1 else "3DVA_J2538_8A_latent_with_class.csv.gz"
+CSV = sys.argv[1] if len(sys.argv) > 1 else "3DVA_J2538_8A_latent_with_class.csv"
 OUT = "Fig4B_latent_landscape"
 
 # ----------------------------------------------------------------- STYLE (edit)
