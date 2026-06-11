@@ -20,14 +20,14 @@ I-shape states being representative geometries rather than discrete conformers.
 ## Data
 
 The per-particle 3DVA latent coordinates are deposited on Zenodo
-(DOI: `10.5281/zenodo.XXXXXXX`), not in this repository, due to size:
+(DOI: `10.5281/zenodo.20649656`), not in this repository, due to size:
 
 | File | Contents |
 |------|----------|
-| `3DVA_J2538_8A_latent_with_class.csv.gz` | Primary run (8 Å filter). Columns: `uid, PC1, PC2, PC3, class` (class = C/S/I or empty). Reproduces Fig. 4B and Supplementary Fig. S4A. |
-| `3DVA_J2541_10A_latent.csv.gz` | Robustness run, 10 Å filter. Columns: `uid, PC1, PC2, PC3`. |
-| `3DVA_J2581_loosermask_latent.csv.gz` | Robustness run, more permissive mask. |
-| `3DVA_J2587_6A_diffmask_latent.csv.gz` | Robustness run, 6 Å filter, different mask. |
+| `3DVA_J2538_8A_latent_with_class.csv` | Primary run (8 Å filter). Columns: `uid, PC1, PC2, PC3, class` (class = C/S/I or empty). Reproduces Fig. 4B and Supplementary Fig. S4A. |
+| `3DVA_J2541_10A_latent.csv` | Robustness run, 10 Å filter. Columns: `uid, PC1, PC2, PC3`. |
+| `3DVA_J2581_loosermask_latent.csv` | Robustness run, more permissive mask. |
+| `3DVA_J2587_6A_diffmask_latent.csv` | Robustness run, 6 Å filter, different mask. |
 
 The three robustness runs share the same particle `uid` set as the primary
 run; class assignments can be joined from the primary file by `uid`.
@@ -36,12 +36,12 @@ run; class assignments can be joined from the primary file by `uid`.
 
 ```bash
 pip install -r requirements.txt
-# download 3DVA_J2538_8A_latent_with_class.csv.gz from Zenodo into this folder
+# download 3DVA_J2538_8A_latent_with_class.csv from Zenodo into this folder
 python make_fig4B.py
 # -> Fig4B_latent_landscape.pdf / .png / .svg
 ```
 
-To run on a different file: `python make_fig4B.py path/to/latent.csv.gz`.
+To run on a different file: `python make_fig4B.py path/to/latent.csv`.
 
 ## 3DVA parameters
 
@@ -59,7 +59,7 @@ If you use this code or data, please cite:
 
 > [Authors]. [Title]. [Journal] (Year). DOI: [paper DOI]
 
-and the Zenodo archive: DOI `10.5281/zenodo.XXXXXXX`.
+and the Zenodo archive: DOI `10.5281/zenodo.20649656`.
 
 ## License
 
